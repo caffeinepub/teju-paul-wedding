@@ -145,7 +145,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto py-16">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -224,10 +224,89 @@ export function Hero() {
           Paul Benjamin Francis
         </motion.h1>
 
+        {/* Parents - separate lines per person */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="mt-6 flex flex-col items-center gap-2"
+        >
+          <div className="flex items-center gap-2">
+            <span
+              className="font-sans tracking-[0.15em] uppercase text-xs"
+              style={{ color: "oklch(0.72 0.09 75 / 0.65)" }}
+            >
+              Daughter of
+            </span>
+            <span
+              className="font-serif text-sm"
+              style={{ color: "oklch(0.88 0.04 80 / 0.9)" }}
+            >
+              Mrs. A. Jyothi Mary &amp; Mr. R. John Xavier
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span
+              className="font-sans tracking-[0.15em] uppercase text-xs"
+              style={{ color: "oklch(0.72 0.09 75 / 0.65)" }}
+            >
+              Son of
+            </span>
+            <span
+              className="font-serif text-sm"
+              style={{ color: "oklch(0.88 0.04 80 / 0.9)" }}
+            >
+              Mrs. Kala Francis &amp; Mr. C. Francis
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Grandparents Blessings */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.95 }}
+          className="mt-7 mb-2"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div
+              className="h-px w-8"
+              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
+            />
+            <span
+              className="font-sans tracking-[0.2em] uppercase text-xs"
+              style={{ color: "oklch(0.72 0.09 75 / 0.7)" }}
+            >
+              With the Blessings of
+            </span>
+            <div
+              className="h-px w-8"
+              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
+            />
+          </div>
+
+          <div className="flex flex-col items-center gap-1.5">
+            {[
+              "R.A. Rathnappachari & A.P. Rosemary",
+              "Arulappachari & Arogya Mary",
+              "Chinnappa & Anthonamma",
+              "Paulraj & Chinnamma",
+            ].map((name) => (
+              <p
+                key={name}
+                className="font-serif text-xs leading-snug"
+                style={{ color: "oklch(0.82 0.03 78 / 0.8)" }}
+              >
+                {name}
+              </p>
+            ))}
+          </div>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 1.1 }}
           className="mt-6 font-sans tracking-[0.4em] uppercase text-sm"
           style={{ color: "#ffffff" }}
         >
@@ -248,7 +327,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
-          className="mt-16 flex flex-col items-center gap-2"
+          className="mt-12 flex flex-col items-center gap-2"
         >
           <span
             className="font-sans text-xs tracking-widest uppercase"

@@ -9,6 +9,7 @@ const events = [
     description:
       "An evening of music, dance, and celebration as families come together to fill the night with joy and melody.",
     icon: "🎶",
+    venue: "",
   },
   {
     id: "haldi",
@@ -18,6 +19,7 @@ const events = [
     description:
       "A vibrant, golden ceremony where loved ones anoint the couple with turmeric, blessing them with radiance and good fortune.",
     icon: "🌼",
+    venue: "",
   },
   {
     id: "petal-shower",
@@ -27,6 +29,7 @@ const events = [
     description:
       "A fragrant shower of blossoms raining down upon the couple, heralding the beauty of the days ahead.",
     icon: "🌸",
+    venue: "",
   },
   {
     id: "mehendi",
@@ -36,6 +39,7 @@ const events = [
     description:
       "Intricate henna patterns trace stories of love and tradition upon the bride's hands, each design a whispered blessing.",
     icon: "🪷",
+    venue: "",
   },
   {
     id: "bale-shastra",
@@ -45,6 +49,7 @@ const events = [
     description:
       "A cherished ritual adorning the couple with sacred bangles, binding them to the promises of a lifetime together.",
     icon: "✨",
+    venue: "",
   },
   {
     id: "wedding-ceremony",
@@ -54,6 +59,7 @@ const events = [
     description:
       "The sacred moment of union — as the stars align and blessings are bestowed, two hearts become one forever.",
     icon: "🕯️",
+    venue: "Immaculate Conception Church",
   },
   {
     id: "dare-muhurtham",
@@ -63,6 +69,7 @@ const events = [
     description:
       "An auspicious midday ceremony marking the formal solemnization of the blessed union under the watchful heavens.",
     icon: "🌞",
+    venue: "",
   },
   {
     id: "reception",
@@ -72,6 +79,7 @@ const events = [
     description:
       "An enchanting evening of music, dance, and celebration as we welcome the newlyweds into their new chapter.",
     icon: "🥂",
+    venue: "",
   },
 ];
 
@@ -171,6 +179,15 @@ export function Timeline() {
                 >
                   {event.title}
                 </h3>
+                {event.venue ? (
+                  <p
+                    className="font-sans text-xs tracking-widest uppercase mb-2 flex items-center gap-1"
+                    style={{ color: "oklch(0.45 0.09 15)" }}
+                  >
+                    <span>⛪</span>
+                    <span>{event.venue}</span>
+                  </p>
+                ) : null}
                 <p
                   className="font-sans text-sm leading-relaxed"
                   style={{ color: "oklch(0.4 0.03 50)" }}

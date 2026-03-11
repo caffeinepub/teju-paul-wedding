@@ -6,7 +6,7 @@ const VENUES = [
     label: "Venue 1",
     name: "Chaitrashree Royal Banquet",
     subtitle: "Meridian By The Lawns – Luxury Weddings & Events Venue",
-    dates: "8.04.26 – 11.04.26",
+    dates: "8.04.2026 – 13.04.2026",
     address:
       "Kaggalipura Rd, near Big Barn Farm, Bannerughatta, Bilwaradahalli, Bengaluru, Karnataka 560083",
     mapsUrl:
