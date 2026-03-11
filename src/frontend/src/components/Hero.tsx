@@ -151,7 +151,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-6"
         >
           <div className="inline-flex items-center justify-center mx-auto">
             <div
@@ -173,26 +173,86 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Names */}
-        <motion.h1
+        {/* Grandparents Blessings */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.35 }}
+          className="mb-8"
+        >
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div
+              className="h-px w-8"
+              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
+            />
+            <span
+              className="font-sans tracking-[0.2em] uppercase text-xs"
+              style={{ color: "oklch(0.72 0.09 75 / 0.7)" }}
+            >
+              With the Blessings of
+            </span>
+            <div
+              className="h-px w-8"
+              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
+            />
+          </div>
+          <div className="flex flex-col items-center gap-1.5">
+            {[
+              "R.A. Rathnappachari & A.P. Rosemary",
+              "Arulappachari & Arogya Mary",
+              "Chinnappa & Anthonamma",
+              "Paulraj & Chinnamma",
+            ].map((name) => (
+              <p
+                key={name}
+                className="font-serif text-xs leading-snug"
+                style={{ color: "oklch(0.82 0.03 78 / 0.8)" }}
+              >
+                {name}
+              </p>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Teju's name + parents */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="font-serif font-light tracking-widest"
-          style={{
-            color: "oklch(0.98 0.01 85)",
-            fontSize: "clamp(1.8rem, 5vw, 3.5rem)",
-            lineHeight: 1.2,
-          }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="flex flex-col items-center gap-1"
         >
-          J. Teju Catharine
-        </motion.h1>
+          <h1
+            className="font-serif font-light tracking-widest"
+            style={{
+              color: "oklch(0.98 0.01 85)",
+              fontSize: "clamp(1.8rem, 5vw, 3.5rem)",
+              lineHeight: 1.2,
+            }}
+          >
+            J. Teju Catharine
+          </h1>
+          <div className="flex items-center gap-1.5 mt-1">
+            <span
+              className="font-sans tracking-[0.15em] uppercase text-xs"
+              style={{ color: "oklch(0.72 0.09 75 / 0.65)" }}
+            >
+              Daughter of
+            </span>
+            <span
+              className="font-serif text-xs"
+              style={{ color: "oklch(0.88 0.04 80 / 0.9)" }}
+            >
+              Mrs. A. Jyothi Mary &amp; Mr. R. John Xavier
+            </span>
+          </div>
+        </motion.div>
 
+        {/* Divider */}
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="my-4 flex items-center justify-center gap-4"
+          className="my-5 flex items-center justify-center gap-4"
         >
           <div
             className="h-px w-16"
@@ -210,42 +270,24 @@ export function Hero() {
           />
         </motion.div>
 
-        <motion.h1
+        {/* Paul's name + parents */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="font-serif font-light tracking-widest"
-          style={{
-            color: "oklch(0.98 0.01 85)",
-            fontSize: "clamp(1.8rem, 5vw, 3.5rem)",
-            lineHeight: 1.2,
-          }}
+          transition={{ duration: 1, delay: 0.65 }}
+          className="flex flex-col items-center gap-1"
         >
-          Paul Benjamin Francis
-        </motion.h1>
-
-        {/* Parents - separate lines per person */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-6 flex flex-col items-center gap-2"
-        >
-          <div className="flex items-center gap-2">
-            <span
-              className="font-sans tracking-[0.15em] uppercase text-xs"
-              style={{ color: "oklch(0.72 0.09 75 / 0.65)" }}
-            >
-              Daughter of
-            </span>
-            <span
-              className="font-serif text-sm"
-              style={{ color: "oklch(0.88 0.04 80 / 0.9)" }}
-            >
-              Mrs. A. Jyothi Mary &amp; Mr. R. John Xavier
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
+          <h1
+            className="font-serif font-light tracking-widest"
+            style={{
+              color: "oklch(0.98 0.01 85)",
+              fontSize: "clamp(1.8rem, 5vw, 3.5rem)",
+              lineHeight: 1.2,
+            }}
+          >
+            Paul Benjamin Francis
+          </h1>
+          <div className="flex items-center gap-1.5 mt-1">
             <span
               className="font-sans tracking-[0.15em] uppercase text-xs"
               style={{ color: "oklch(0.72 0.09 75 / 0.65)" }}
@@ -253,53 +295,11 @@ export function Hero() {
               Son of
             </span>
             <span
-              className="font-serif text-sm"
+              className="font-serif text-xs"
               style={{ color: "oklch(0.88 0.04 80 / 0.9)" }}
             >
               Mrs. Kala Francis &amp; Mr. C. Francis
             </span>
-          </div>
-        </motion.div>
-
-        {/* Grandparents Blessings */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.95 }}
-          className="mt-7 mb-2"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div
-              className="h-px w-8"
-              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
-            />
-            <span
-              className="font-sans tracking-[0.2em] uppercase text-xs"
-              style={{ color: "oklch(0.72 0.09 75 / 0.7)" }}
-            >
-              With the Blessings of
-            </span>
-            <div
-              className="h-px w-8"
-              style={{ background: "oklch(0.72 0.07 75 / 0.35)" }}
-            />
-          </div>
-
-          <div className="flex flex-col items-center gap-1.5">
-            {[
-              "R.A. Rathnappachari & A.P. Rosemary",
-              "Arulappachari & Arogya Mary",
-              "Chinnappa & Anthonamma",
-              "Paulraj & Chinnamma",
-            ].map((name) => (
-              <p
-                key={name}
-                className="font-serif text-xs leading-snug"
-                style={{ color: "oklch(0.82 0.03 78 / 0.8)" }}
-              >
-                {name}
-              </p>
-            ))}
           </div>
         </motion.div>
 
