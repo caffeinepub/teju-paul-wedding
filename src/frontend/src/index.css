@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury Wedding Palette */
+    /* Background: warm ivory */
+    --background: 0.98 0.01 85;
+    /* Foreground: deep charcoal */
+    --foreground: 0.14 0.012 50;
+
+    /* Card: soft ivory */
+    --card: 0.96 0.015 80;
+    --card-foreground: 0.14 0.012 50;
+
+    /* Popover */
+    --popover: 0.97 0.01 85;
+    --popover-foreground: 0.14 0.012 50;
+
+    /* Primary: deep burgundy */
+    --primary: 0.33 0.12 15;
+    --primary-foreground: 0.98 0.01 85;
+
+    /* Secondary: muted burgundy */
+    --secondary: 0.45 0.08 15;
+    --secondary-foreground: 0.98 0.01 85;
+
+    /* Muted */
+    --muted: 0.92 0.02 75;
+    --muted-foreground: 0.5 0.03 50;
+
+    /* Accent: rich gold */
+    --accent: 0.72 0.09 75;
+    --accent-foreground: 0.14 0.012 50;
+
+    /* Destructive */
+    --destructive: 0.45 0.2 25;
+    --destructive-foreground: 0.98 0.01 85;
+
+    /* Border: muted gold */
+    --border: 0.72 0.06 75;
+    --input: 0.85 0.02 75;
+    --ring: 0.72 0.09 75;
+
+    /* Named custom tokens */
+    --gold: 0.72 0.09 75;
+    --burgundy: 0.33 0.12 15;
+    --ivory: 0.98 0.01 85;
+
+    /* Border radius */
+    --radius: 0.5rem;
+
+    /* Charts */
+    --chart-1: 0.72 0.09 75;
+    --chart-2: 0.33 0.12 15;
+    --chart-3: 0.55 0.07 50;
+    --chart-4: 0.65 0.05 85;
+    --chart-5: 0.45 0.08 15;
+
+    /* Sidebar */
+    --sidebar: 0.96 0.015 80;
+    --sidebar-foreground: 0.14 0.012 50;
+    --sidebar-primary: 0.33 0.12 15;
+    --sidebar-primary-foreground: 0.98 0.01 85;
+    --sidebar-accent: 0.72 0.09 75;
+    --sidebar-accent-foreground: 0.14 0.012 50;
+    --sidebar-border: 0.72 0.06 75;
+    --sidebar-ring: 0.72 0.09 75;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Velvet curtain texture */
+.curtain-texture {
+  background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 8px,
+      oklch(0.28 0.1 15 / 0.15) 8px,
+      oklch(0.28 0.1 15 / 0.15) 16px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 40px,
+      oklch(0.25 0.08 15 / 0.1) 40px,
+      oklch(0.25 0.08 15 / 0.1) 80px
+    ),
+    linear-gradient(
+      180deg,
+      oklch(0.28 0.12 15) 0%,
+      oklch(0.35 0.14 12) 30%,
+      oklch(0.25 0.1 15) 60%,
+      oklch(0.3 0.13 13) 100%
+    );
+}
+
+/* Gold shimmer text */
+.gold-text {
+  background: linear-gradient(
+    135deg,
+    oklch(0.65 0.08 75) 0%,
+    oklch(0.78 0.11 78) 30%,
+    oklch(0.85 0.09 85) 50%,
+    oklch(0.78 0.11 78) 70%,
+    oklch(0.65 0.08 75) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+}
+
+.gold-text-animate {
+  animation: shimmer 4s linear infinite;
+}
+
+/* Ornate border */
+.ornate-border {
+  border: 1px solid oklch(0.72 0.06 75);
+  box-shadow: 0 0 0 4px oklch(0.72 0.04 75 / 0.2), inset 0 0 0 1px
+    oklch(0.72 0.06 75 / 0.3);
+}
+
+/* Cathedral arch clip */
+.arch-clip {
+  clip-path: polygon(
+    5% 100%,
+    5% 45%,
+    0% 40%,
+    0% 0%,
+    100% 0%,
+    100% 40%,
+    95% 45%,
+    95% 100%
+  );
+}
+
+/* Particle animation delays */
+.particle-1 {
+  animation-delay: 0s;
+}
+.particle-2 {
+  animation-delay: 0.8s;
+}
+.particle-3 {
+  animation-delay: 1.6s;
+}
+.particle-4 {
+  animation-delay: 2.4s;
+}
+.particle-5 {
+  animation-delay: 3.2s;
+}
+.particle-6 {
+  animation-delay: 1.2s;
+}
+
+/* Flip card for countdown */
+.flip-card {
+  perspective: 400px;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+}
+
+/* Scratch canvas cursor */
+.scratch-canvas {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="%23C9A84C" stroke-width="2"/></svg>')
+    12 12, crosshair;
+}
+
+/* Section fade-in animation */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cathedral light rays */
+.light-ray {
+  background: linear-gradient(
+    to bottom,
+    oklch(0.72 0.09 75 / 0.3) 0%,
+    oklch(0.72 0.09 75 / 0.05) 60%,
+    transparent 100%
+  );
+  transform-origin: top center;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.01 80);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.72 0.07 75);
+  border-radius: 3px;
+}
