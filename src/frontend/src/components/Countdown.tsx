@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 function getTimeLeft() {
-  // March 28, 2026 10:00 AM IST = UTC+5:30
-  const target = new Date("2026-03-28T04:30:00Z"); // 10:00 AM IST
+  // 13 April 2026, 9:15 AM IST = UTC+5:30 => 03:45 UTC
+  const target = new Date("2026-04-13T03:45:00Z");
   const now = new Date();
   const diff = target.getTime() - now.getTime();
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -51,7 +51,6 @@ function FlipUnit({ value, label }: FlipUnitProps) {
             "0 0 20px oklch(0.72 0.06 75 / 0.15), inset 0 1px 0 oklch(0.72 0.09 75 / 0.2)",
         }}
       >
-        {/* Center divider line */}
         <div
           className="absolute inset-x-0 top-1/2 h-px z-10"
           style={{ background: "oklch(0.72 0.06 75 / 0.3)" }}
@@ -126,7 +125,7 @@ export function Countdown() {
           Until We Say "I Do"
         </h2>
         <p className="font-serif italic mb-10" style={{ color: "#ffffff" }}>
-          28 March 2026 · 10:00 AM IST
+          13 April 2026 · 9:15 AM IST
         </p>
 
         <div className="flex items-start justify-center gap-4 md:gap-8">

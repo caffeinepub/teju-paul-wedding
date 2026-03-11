@@ -146,28 +146,30 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        {/* Monogram */}
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="mb-8"
         >
-          <div
-            className="inline-flex items-center justify-center w-28 h-28 md:w-36 md:h-36 rounded-full border mx-auto"
-            style={{
-              borderColor: "oklch(0.72 0.07 75 / 0.6)",
-              background: "oklch(0.72 0.09 75 / 0.05)",
-              boxShadow:
-                "0 0 40px oklch(0.72 0.09 75 / 0.2), inset 0 0 20px oklch(0.72 0.09 75 / 0.05)",
-            }}
-          >
-            <span
-              className="font-serif gold-text gold-text-animate"
-              style={{ fontSize: "2.5rem", lineHeight: 1 }}
+          <div className="inline-flex items-center justify-center mx-auto">
+            <div
+              className="rounded-full overflow-hidden border-2"
+              style={{
+                borderColor: "oklch(0.72 0.09 75 / 0.6)",
+                boxShadow: "0 0 24px oklch(0.72 0.09 75 / 0.3)",
+              }}
             >
-              T &amp; P
-            </span>
+              <img
+                src="/assets/uploads/WhatsApp-Image-2026-03-11-at-10.18.13-AM-1.jpeg"
+                alt="T & P monogram logo"
+                className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full"
+                style={{
+                  filter: "drop-shadow(0 0 16px oklch(0.72 0.09 75 / 0.4))",
+                }}
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -229,7 +231,7 @@ export function Hero() {
           className="mt-6 font-sans tracking-[0.4em] uppercase text-sm"
           style={{ color: "#ffffff" }}
         >
-          28 · March · 2026
+          13 · April · 2026
         </motion.p>
 
         <motion.p

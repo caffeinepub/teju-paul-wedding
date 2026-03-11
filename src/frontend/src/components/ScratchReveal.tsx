@@ -17,11 +17,9 @@ export function ScratchReveal() {
     canvas.width = rect.width;
     canvas.height = rect.height;
 
-    // Draw scratch layer
     ctx.fillStyle = "#8a7a6a";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Add texture lines
     for (let i = 0; i < 80; i++) {
       ctx.beginPath();
       ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
@@ -31,7 +29,6 @@ export function ScratchReveal() {
       ctx.stroke();
     }
 
-    // Text hint
     ctx.fillStyle = "rgba(50,40,30,0.5)";
     ctx.font = "bold 14px 'Lato', sans-serif";
     ctx.textAlign = "center";
@@ -72,7 +69,6 @@ export function ScratchReveal() {
     ctx.fill();
     ctx.globalCompositeOperation = "source-over";
 
-    // Calculate reveal percentage
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let cleared = 0;
     for (let i = 3; i < imageData.data.length; i += 4) {
@@ -133,12 +129,10 @@ export function ScratchReveal() {
           Discover Our Day
         </h2>
 
-        {/* Scratch card */}
         <div
           className="relative mx-auto rounded-lg overflow-hidden ornate-border"
           style={{ width: "100%", maxWidth: 400, aspectRatio: "2/1" }}
         >
-          {/* Revealed content underneath */}
           <div
             className="absolute inset-0 flex flex-col items-center justify-center"
             style={{
@@ -160,17 +154,16 @@ export function ScratchReveal() {
                 color: "#ffffff",
               }}
             >
-              28 · 03 · 2026
+              13 · 04 · 2026
             </p>
             <p
               className="font-serif italic mt-2 text-sm"
               style={{ color: "oklch(0.85 0.02 80)" }}
             >
-              10:00 AM · The Grand Cathedral
+              9:15 AM · Wedding Ceremony
             </p>
           </div>
 
-          {/* Scratch overlay canvas */}
           {!isFullyRevealed && (
             <canvas
               ref={canvasRef}

@@ -15,14 +15,24 @@ export function Footer() {
         borderTop: "1px solid oklch(0.72 0.06 75 / 0.2)",
       }}
     >
-      {/* Monogram */}
-      <div className="mb-6">
-        <span
-          className="font-serif text-3xl gold-text"
-          style={{ letterSpacing: "0.2em" }}
+      {/* Logo */}
+      <div className="mb-6 flex justify-center">
+        <div
+          className="rounded-full overflow-hidden border"
+          style={{
+            borderColor: "oklch(0.72 0.09 75 / 0.4)",
+            boxShadow: "0 0 16px oklch(0.72 0.09 75 / 0.2)",
+          }}
         >
-          T &amp; P
-        </span>
+          <img
+            src="/assets/uploads/WhatsApp-Image-2026-03-11-at-10.18.13-AM-1.jpeg"
+            alt="T & P monogram logo"
+            className="w-14 h-14 object-cover rounded-full"
+            style={{
+              filter: "drop-shadow(0 0 8px oklch(0.72 0.09 75 / 0.3))",
+            }}
+          />
+        </div>
       </div>
 
       {/* Main footer line */}
@@ -30,7 +40,7 @@ export function Footer() {
         className="font-serif italic text-lg mb-2"
         style={{ color: "oklch(0.75 0.03 70)" }}
       >
-        With love, Teju &amp; Paul · 28.03.2026
+        With love, Teju &amp; Paul · 13.04.2026
       </p>
 
       <p className="font-sans text-xs" style={{ color: "oklch(0.5 0.03 50)" }}>

@@ -7,6 +7,7 @@ import { Curtain } from "./components/Curtain";
 import { FleuronDivider, OrnamentDivider } from "./components/Divider";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
+import { MusicPlayer } from "./components/MusicPlayer";
 import { RsvpForm } from "./components/RsvpForm";
 import { ScratchReveal } from "./components/ScratchReveal";
 import { ShareSection } from "./components/ShareSection";
@@ -83,6 +84,8 @@ function WeddingApp() {
 
         <Footer />
       </main>
+
+      <MusicPlayer />
     </div>
   );
 }
